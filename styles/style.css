@@ -1,0 +1,9 @@
+.active{
+    color:white;
+    
+    border-radius: 120px;
+    background: rgba(14, 122, 129, 0.1);
+}
+.grid{
+    align-items: start;
+}

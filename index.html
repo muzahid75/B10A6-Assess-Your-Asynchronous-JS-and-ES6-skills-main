@@ -7,10 +7,144 @@
     <title>B10A6-Assess-Your-Asynchronous-JS-and-ES6-skills-main</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
+    <header class="header max-w-screen-xl mx-auto mb-12">
 
+        <nav class="navbar px-4 py-2 flex items-center justify-between">
+            <!-- Navbar Start -->
+            <div class="navbar-start flex items-center gap-2">
+                <img src="./images/logo.webp" alt="Logo" class="w-8 h-8">
+                <a class="text-2xl font-bold">Peddy</a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <div class="lg:hidden">
+                <button id="menu-toggle" class="text-gray-700">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navbar Center -->
+            <div id="menu" class="navbar-center hidden lg:flex">
+                <ul class="px-1 flex gap-4 text-sm">
+                    <li><a href="#" class="hover:text-blue-500">Home</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Shop</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Navbar End -->
+            <div class="navbar-end">
+                <img src="./images/human_icon.png" alt="User Icon" class="w-8 h-8">
+            </div>
+        </nav>
+
+        <!-- banner section  -->
+        <div class="hero-container">
+            <!-- banner content  -->
+            <div class="max-w-3xl text-center mx-auto p-2">
+                <h1 class="text-base font-bold text-gray-500">Bringing Families Together ❤️‍🔥</h1>
+                <p class="text-3xl lg:text-7xl py-4">
+                    Your Path to Adoption Starts Here
+                </p>
+                <p class="text-xs mb-5">It is a long established fact that a reader will be distracted by the readable
+                    content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+                <button class="px-5 py-3 rounded-lg bg-[#0E7A81] text-white"><a href="#adopt-section">View
+                        More</a></button>
+            </div>
+            <!-- banner-image  -->
+            <div class="hero-img">
+                <img class="mx-auto text-center" src="./images/pet.webp" alt="">
+            </div>
+        </div>
+
+    </header>
+    <main class="main max-w-screen-xl mb-12 mx-auto ">
+
+        <!-- adopt section  -->
+        <section id="adopt-section" class="best-friend">
+            <div class="max-w-3xl text-center mb-10 mx-auto ">
+                <h1 class="text-4xl font-bold">Adopt Your Best Friend</h1>
+                <p class="text-xs py-4">
+                    It is a long established fact that a reader will be distracted by the readable content of a page
+                    when looking at its layout. The point of using Lorem Ipsum is that it has a.
+                </p>
+            </div>
+            <div id="category-btn"
+                class="px-3 gap-5 lg:gap-10 text-center mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
+            </div>
+        </section>
+
+        <!-- deal section  -->
+        <section class="deal-section mb-10 px-3">
+            <div class="deal-nav flex justify-between items-center">
+                <p class="text-base font-bold">Best deal for you</p>
+                <div class="sort">
+                    <button id="sort-button" class="btn">Sort by price</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- spinner -->
+        <div class="flex items-center justify-center w-full">
+            <span id="spinner" class="loading loading-bars loading-lg"></span>
+        </div>
+
+        <!-- pets section  -->
+        <section id="pets" class="container gap-2 mb-10 grid lg:grid-cols-[66.66%,33.33%]">
+            <div id="pets-container" class="h-max grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            </div>
+
+            <div id="show-image" class="grid grid-cols-2 gap-2 overflow-y-auto max-h-full">
+
+            </div>
+        </section>
+
+        <!-- modal details -->
+        <button id="showModalData" class="btn hidden" onclick="customModal.showModal()">Open Modal</button>
+        <dialog id="customModal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box max-w-4xl w-full">
+                <div id="modal-content" class="p-4 space-y-4">
+                    <!-- Content will be dynamically inserted here -->
+                </div>
+                <div class="modal-action flex justify-center items-center w-full">
+                    <form method="dialog" class="w-full">
+                        <button class="btn w-full h-14 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                            Close
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+        <!-- modal adopt -->
+        <button id="showModalDataAdopt" class="btn hidden" onclick="customModalAdopt.showModal()">open modal</button>
+        <dialog id="customModalAdopt" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div class="bg-white" id="modal-content-adopt">
+
+                </div>
+                <div class="modal-action flex justify-center items-center w-full">
+                    <form method="dialog" class="w-full">
+                        <!-- Button that fills the whole div -->
+                        <button class="btn w-full h-14 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
+                            Close
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </dialog>
+
+    </main>
+    <script src="./js/content.js"></script>
 </body>
 
 </html>
